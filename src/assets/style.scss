@@ -1,0 +1,168 @@
+$orange: #ff8663;
+$white: #ffffff;
+
+* {
+  box-sizing: border-box;
+}
+
+.col-6 {
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 6px;
+}
+
+.app {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 620px;
+
+  &__filter,
+  &__lists {
+    display: flex;
+  }
+
+  &__head {
+    color: $white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+
+    background-color: $orange;
+  }
+
+  &__filter {
+    padding: 10px 0;
+
+    background-color: #f0f0f0;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+
+    background-color: #f0f0f0;
+  }
+
+  input {
+    display: block;
+    margin: 0 10px;
+    height: 26px;
+    width: 100%;
+    max-width: calc(100% - 20px);
+    padding: 0 10px;
+
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 13px;
+
+    color: #9f9f9f;
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+.btn {
+  background-color: #ff8663;
+  border: 0;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 300;
+
+  padding: 6px 15px;
+
+  &:hover {
+    background-color: lighten(#ff8663, 10);
+  }
+}
+
+.col-title {
+  padding: 8px 15px;
+
+  color: #4f4f4f;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.friendList {
+  overflow-y: auto;
+  height: 400px;
+  max-height: 400px;
+  padding: 10px 15px;
+
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $white;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: #c4c4c4;
+    border-radius: 2px;
+  }
+
+}
+
+.friend {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 1px;
+
+  box-shadow: 0 -1px 0 0 #f0f0f0, 0 1px 0 0 #f0f0f0;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+
+  button {
+    border: 0;
+    background-color: transparent;
+
+    color: #c4c4c4;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 16px;
+
+    cursor: pointer;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 12px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    color: #4f4f4f;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  &__control {
+    margin-left: auto;
+  }
+}

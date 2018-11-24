@@ -1,0 +1,144 @@
+<style>
+    * {
+        box-sizing: border-box; }
+
+    .col-6 {
+        width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 6px; }
+
+    .app {
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0 auto;
+        width: 620px; }
+    .app__filter, .app__lists {
+        display: flex; }
+    .app__head {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 10px 15px;
+        background-color: #ff8663; }
+    .app__filter {
+        padding: 10px 0;
+        background-color: #f0f0f0; }
+    .app__footer {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+        background-color: #f0f0f0; }
+    .app input {
+        display: block;
+        margin: 0 10px;
+        height: 26px;
+        width: 100%;
+        max-width: calc(100% - 20px);
+        padding: 0 10px;
+        background-color: #ffffff;
+        border: 0;
+        border-radius: 13px;
+        color: #9f9f9f;
+        font-size: 12px;
+        font-weight: 300; }
+
+    .btn {
+        background-color: #ff8663;
+        border: 0;
+        border-radius: 8px;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 6px 15px; }
+    .btn:hover {
+        background-color: #ffae96; }
+
+    .col-title {
+        padding: 8px 15px;
+        color: #4f4f4f;
+        font-size: 12px;
+        font-weight: 500; }
+
+    .friendList {
+        overflow-y: auto;
+        height: 400px;
+        max-height: 400px;
+        padding: 10px 15px; }
+    .friendList::-webkit-scrollbar {
+        width: 4px; }
+    .friendList::-webkit-scrollbar-track {
+        background-color: #ffffff;
+        width: 4px; }
+    .friendList::-webkit-scrollbar-thumb {
+        width: 4px;
+        background-color: #c4c4c4;
+        border-radius: 2px; }
+
+    .friend {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+        margin: 0 1px;
+        box-shadow: 0 -1px 0 0 #f0f0f0, 0 1px 0 0 #f0f0f0; }
+    .friend:hover {
+        background-color: #f0f0f0; }
+    .friend button {
+        border: 0;
+        background-color: transparent;
+        color: #c4c4c4;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 16px;
+        cursor: pointer; }
+    .friend button:hover {
+        color: #ff8663; }
+    .friend__photo {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 12px; }
+    .friend__photo img {
+        width: 100%;
+        object-fit: cover; }
+    .friend__name {
+        color: #4f4f4f;
+        font-size: 12px;
+        font-weight: 500; }
+    .friend__control {
+        margin-left: auto; }
+</style>
+
+<div class="app">
+    <div class="app__head">Выберите друзей</div>
+    <div class="app__filter">
+        <div class="col-6">
+            <input type="text" id="main-search" placeholder="Начните вводить имя друга">
+        </div>
+        <div class="col-6">
+            <input type="text" id="favorite-search" placeholder="Начните вводить имя друга">
+        </div>
+    </div>
+    <div class="app__lists">
+        <div class="col-6">
+            <div class="col-title">
+                Ваши друзья
+            </div>
+            <div class="app__main-list "></div>
+        </div>
+        <div class="col-6">
+            <div class="col-title">
+                Друзья в списке
+            </div>
+            <div class="app__favorite-list"></div>
+        </div>
+    </div>
+    <div class="app__footer">
+        <button id="save-button" class="btn">Сохранить</button>
+    </div>
+
+</div>
+
